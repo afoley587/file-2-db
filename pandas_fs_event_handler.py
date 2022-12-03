@@ -52,7 +52,7 @@ class PandasStateWatcher:
     # drop the SQL Table
     self.__to_sql(src_path, operation = "drop")
 
-  def update_dataframes(self, src_path):
+  def update_dataframe(self, src_path):
     """Updates a dataframe and records the transaction in the database
 
     Arguments:
@@ -125,7 +125,7 @@ class PandasFileSystemEventHander(watchdog.events.FileSystemEventHandler):
       event: The filesystem event that occured
     """
     logging.debug(f"Modified Event {event.src_path}")
-    PandasFileSystemEventHander.state_watcher.update_dataframes(event.src_path)
+    PandasFileSystemEventHander.state_watcher.update_dataframe(event.src_path)
   
   def on_moved(self, event):
     """Monitors when files are moved or renamed
