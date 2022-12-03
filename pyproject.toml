@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pycurl"
+version = "0.1.0"
+description = ""
+authors = ["Alex Foley <alexandergfoley@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^1.5.2"
+watchdog = "^2.1.9"
+SQLAlchemy = "^1.4.44"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
